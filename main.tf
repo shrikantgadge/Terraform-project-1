@@ -152,7 +152,7 @@ resource "aws_autoscaling_policy" "request_scaling" {
     target_value = 1000.0
     predefined_metric_specification {
       predefined_metric_type = "ALBRequestCountPerTarget"
-      resource_label         = "${aws_lb.web_alb.arn_suffix}/${aws_lb_target_group.web_tg.arn_suffix}"
+      resource_label = "${aws_lb.web_alb.arn_suffix}/${aws_lb_target_group.web_tg.arn_suffix}"
     }
   }
 }
