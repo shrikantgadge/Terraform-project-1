@@ -49,7 +49,7 @@ Review the proposed changes before confirming. AWS charges may apply while resou
 - Browser refreshes alone do not guarantee scaling; the request-count policy needs enough traffic and time for metric evaluation.
 - Never commit AWS keys, Terraform state, or sensitive variable files to GitHub.
 
-##EC2 par traffic badhao — automatic scaling test
+## EC2 par traffic badhao — automatic scaling test
  ```bash
 URL=$(terraform output -raw load_balancer_url)
 
@@ -59,7 +59,7 @@ done
 
 wait
 ```
-##Verify karo ki EC2 scale hue ya nahi
+## Verify karo ki EC2 scale hue ya nahi
 ```bash
 aws autoscaling describe-auto-scaling-groups \
   --auto-scaling-group-names terraform-web-asg \
@@ -67,7 +67,7 @@ aws autoscaling describe-auto-scaling-groups \
   --output table
 ```
 
-##Check karo instances badhe ya nahi
+## Check karo instances badhe ya nahi
 ```bash
 aws autoscaling describe-auto-scaling-groups \
   --auto-scaling-group-name terraform-web-asg \
